@@ -1,0 +1,371 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+.natasa {
+  background-color:  #022c22;
+}
+
+.meatnav {
+  background-color: #820e0e;
+}
+
+.font-dancing-script {
+  font-family: 'dancing script', cursive;
+}
+
+.heading {
+  font-size: 3rem;
+  font-family: 'Great Vibes', cursive;
+}
+
+.text-4x1 {
+  font-size: 6rem;
+  font-family: 'Cookie', cursive;
+  
+}
+
+.summary {
+  font-size: 1.5rem;
+  font-family: 'Great Vibes', cursive;
+}
+
+.theText{
+  font-size: 4.5rem;
+  font-family: 'Great Vibes', cursive;
+}
+
+
+section {
+  min-height: 100vh;
+}
+
+.homebg{
+  background-image: url('./background/food.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.recbg{
+  background-image: url('./background/recipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dropdown-menu {
+  background-color: #08765c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-menu-meat {
+  background-color: #9e3636;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-menu-kosher {
+  background-color: #3c35bf;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-item {
+  margin-bottom: 8px;
+}
+
+.meat {
+  background-image: url('./background/meatbg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Meatecbg{
+  background-image: url('./background/meatrecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.koshernav {
+  background-color: #0f4896;
+}
+
+.kosher{
+  background-image: url('./background/kosherbg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.kosherRecipies{
+  background-image: url('./background/kosherrecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.glutenfreesaltynav{
+  background-color: #7e620c;
+}
+
+.dropdown-menu-glutenfreesalty {
+  background-color: #dbb50a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.glutenFreeSalty{
+  background-image: url('./background/glutenfreesaltybg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.glutenFreeSaltyRecipies{
+  background-image: url('./background/glutenfreeSaltyrecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fish{
+  background-image: url('./background/fishbg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fishnav{
+  background-color: #6e0d3f;
+}
+
+.dropdown-menu-fish {
+  background-color: #c40d6e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fishRecipies{
+  background-image: url('./background/fishrecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.VegetarianSalty{
+  background-image: url('./background/vegetarianSaltybg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vnavsalty{
+  background-color: #0c6e5a;
+}
+
+.dropdown-menu-vegetariansalty {
+  background-color: #0f987c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vsaltyRecipies{
+  background-image: url('./background/vegetarianSaltyrecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vgsaltybg{
+  background-image: url('./background/VeganSaltybg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vgsaltyRecipies{
+  background-image: url('./background/veganSaltyRecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vgsaltynav{
+  background-color: #0c6e3f;
+}
+
+.dropdown-menu-vegansalty {
+  background-color: #e24f58;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cookies{
+  background-image: url('./background/Cookiesbg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cookiesrecipies{
+  background-image: url('./background/cookiesrecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navcookies{
+  background-color: #154c79;
+}
+
+.dropdown-menu-cookies {
+  background-color: #0f6e9e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.cookiesrecipies.hovered {
+  /* Define the styles for the hover animation */
+  /* For example, you can change the background color or apply a transform */
+  background-color: red;
+  transform: scale(1.1);
+}
+
+
+.gfsweetnav{
+  background-color: #7e620c;
+}
+
+.dropdown-menu-glutenfreesweet {
+  background-color: #dbb50a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.GfsweetRecipies{
+  background-image: url('./background/gfsweetrecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gfsweetbg{
+  background-image: url('./background/gfsweetbg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vsweetnav{
+  background-color: #cf02ad;
+}
+
+.dropdown-menu-vsweet{
+  background-color: #a1ceb1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vsweetRecipies{
+  background-image: url('./background/VSweetrecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vsweetbg{
+  background-image: url('./background/VSweetbg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vgsweetnav{
+  background-color: #069054;
+}
+
+.dropdown-menu-vgsweet {
+  background-color: #3c1a6a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vgsweetRecipies{
+  background-image: url('./background/vgsweetrecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vgsweetbg{
+  background-image: url('./background/vgsweetbg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.minnav{
+  background-color: #6e510c;
+}
+
+.dropdown-menu-20min {
+  background-color: #ca7a09;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.min{
+  background-image: url('./background/20minbg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.minRecipies{
+  background-image: url('./background/20minrecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.spicybg{
+  background-image: url('./background/spicybg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.spicyrecipies{
+  background-image: url('./background/spicyrecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.spicynav{
+  background-color: #a70d0d;
+}
+
+.dropdown-menu-spicy {
+  background-color: #ff1010;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.dropdown-menu-summer {
+  background-color: #ca0909;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summerbg{
+  background-image: url('./background/summerbg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.summerrecipies{
+  background-image: url('./background/summerrecipies.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.summernav{
+  background-color: #1500ff;
+}
