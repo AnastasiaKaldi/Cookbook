@@ -200,9 +200,8 @@ section {
 }
 
 .cookies{
-  background-image: url('./background/Cookiesbg.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #ffffff;
+
 }
 
 .cookiesrecipies{
@@ -214,18 +213,33 @@ section {
 }
 
 .navcookies{
-  background-color: #154c79;
+  background-color: #052910;
 }
 
 .ImageC{
   position: relative;
-  bottom: -500px ;
-  /* left: 0;
-  width: 100%;
-  display: flex; */
+  bottom: -200px ;
+  left: -200px;
+
   justify-content: center;
   align-items: center;
   height: 30vh;
+}
+
+.flextag{
+  position: relative;
+  bottom: +20px ;
+  right: -300px;
+
+
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+
+}
+
+.flex-item {
+  padding: 10px;
 }
 
 .backgroundC{
@@ -242,7 +256,7 @@ section {
   top: 50%;
   left: 33%;
   transform: translate(-30%, -30%);
-  background: rgba(5, 224, 140, 0.423);
+  background: rgba(183, 126, 183, 0.423);
   width: 2000px;
   border-radius: 10px;
   height: 500px;
@@ -321,7 +335,7 @@ section {
 }
 
 .popup-content {
-  background-color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(30, 80, 42, 0.608);
   padding: 10px;
   width: 70%;
   height: 70%;
