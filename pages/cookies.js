@@ -1,5 +1,5 @@
 import Head from "next/head";
-import NavBarCookies from "@/components/NavBarCookies";
+import NavBar from "@/components/NavBar";
 import Cookies from "@/components/Cookies";
 import CookiesRecipies from "@/components/CookiesRecipies";
 
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
 
       <header>
-        <NavBarCookies />
+        <NavBar />
       </header>
 
       <main>

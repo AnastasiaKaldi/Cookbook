@@ -3,10 +3,134 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet');
 
-.natasa {
-  background-color:  #022c22;
+
+:root {
+  --primary-bg: #cb066f;
+  --secondary-bg: #ee0a0a;
+  --primary-text-color: #980101;
+  --secondary-text-color: #ee0083;
+  --border-radius: 8px;
+  --speed: 500ms;
 }
+
+.NavBar {
+  text-align: center;
+}
+
+.hamburger-icon {
+  display: flex; /* Hide the hamburger icon on larger screens */
+}
+
+.menu-trigger {
+  /* Adjust top and right values to position the icon */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+ background-color: #ffffff !important; 
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  width: 320px;
+  height: 250px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: var(--speed) ease;
+}
+
+.dropdownmenu::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  background: var(--secondary-bg);
+  transform: rotate(45deg);
+}
+
+h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  font-weight: 500;
+  color: var(--primary-text-color);
+  line-height: 1.2rem;
+}
+
+h3 span {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  font-weight: 400;
+}
+
+.dropdown-menu ul li {
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.993);
+}
+
+.dropdown-menu ul li:hover a {
+  color: rgb(179, 129, 185);
+  cursor: pointer;
+}
+
+.dropdown-menu ul li:hover img {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.dropdownItem {
+  display: flex;
+  margin: 10px auto;
+}
+
+.dropdownItem img {
+  max-width: 20px;
+  margin-right: 10px;
+  transition: var(--speed);
+}
+
+.dropdownItem a {
+  max-width: 100px;
+  margin-left: 10px;
+  transition: var(--speed);
+}
+
+@media (max-width: 767px) {
+  .hamburger-icon {
+    display: block; /* Display the hamburger icon on smaller screens */
+  }
+
+  .menu-container ul {
+    display: none; /* Hide the navigation links on smaller screens by default */
+  }
+
+  .menu-container.active ul {
+    display: block; /* Show the navigation links as a vertical list when the menu is open */
+  }
+}
+
+
 
 .meatnav {
   background-color: #820e0e;
@@ -24,6 +148,12 @@
 .text-4x1 {
   font-size: 6rem;
   font-family: 'Cookie', cursive;
+  
+}
+
+.destext{
+  font-size: 6rem;
+  font-family: 'Nanum Myeongjo', serif;
   
 }
 
@@ -200,8 +330,16 @@ section {
 }
 
 .cookies{
-  background-color: #ffffff;
+  background-image: url('./background/dessertbg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 
+}
+
+.salty{
+  background-image: url('./background/saltybg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cookiesrecipies{
@@ -240,6 +378,37 @@ section {
 
 .flex-item {
   padding: 10px;
+}
+
+.image-caption-container{
+  position: relative;
+  bottom: -500px ;
+  left: +160px;
+  display: flex; /* Set the flex display to vertically align the image and caption */
+  flex-direction: column; /* Stack the image and caption vertically */
+  align-items: center; /* Center the items horizontally within the container */
+  text-align: center; 
+
+}
+
+.vertical-line {
+  border-left: 1px solid black;
+  height: 300px; /* Adjust the height as needed to match the height of your images */
+  margin: 30px; /* Adjust the margin to control the spacing between the line and images */
+}
+
+.image-caption-container .Image {
+  /* Set the max width and max height for the images */
+  max-width: 100%; /* This will make sure the images scale down to their container's width */
+  max-height: 250px; /* Set a fixed max height for the images (adjust this value as needed) */
+}
+
+figcaption {
+  margin-top: 10px; /* Add spacing between the image and caption */
+  font-size: 16px; /* Adjust the font size as needed */
+  font-weight: bold; /* Set the font weight to bold or adjust as needed */
+  color: #333; /* Set the font color (adjust the hex code or use color names) */
+  text-align: center;
 }
 
 .backgroundC{
@@ -335,7 +504,7 @@ section {
 }
 
 .popup-content {
-  background-color: rgba(30, 80, 42, 0.608);
+  background-color: rgba(198, 163, 198, 0.685);
   padding: 10px;
   width: 70%;
   height: 70%;

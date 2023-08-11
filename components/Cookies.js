@@ -3,11 +3,13 @@ import Image from "next/image";
 import chokcookie from "../styles/background/chokcookie.jpeg";
 import doublechock from "../styles/background/doublechock.jpeg";
 import cinnamon from "../styles/background/cinnamon.jpeg";
+import mosaiko from "../styles/background/mosaiko.jpeg";
 
 const Cookies = () => {
   const [showPopup1, setShowPopup1] = useState(false);
   const [showPopup2, setShowPopup2] = useState(false);
   const [showPopup3, setShowPopup3] = useState(false);
+  const [showPopup4, setShowPopup4] = useState(false);
 
   const handleItemClick1 = () => {
     setShowPopup1(true);
@@ -19,6 +21,10 @@ const Cookies = () => {
 
   const handleItemClick3 = () => {
     setShowPopup3(true);
+  };
+
+  const handleItemClick4 = () => {
+    setShowPopup4(true);
   };
 
   const handleClosePopup1 = () => {
@@ -33,29 +39,63 @@ const Cookies = () => {
     setShowPopup3(false);
   };
 
+  const handleClosePopup4 = () => {
+    setShowPopup4(false);
+  };
+
   return (
     <section className="cookies">
-      <div className="">
+      <div className="mx-auto items-center justify-center">
+        <h1 className="destext  mb-10 text-violet-950 absolute top-60 left-1/2 transform -translate-x-1/2">
+          The Dessert section
+        </h1>
         <div className="">
           <div className=""></div>
-          <div className=" ImageC space-x-40 flex p-10">
-            <Image
-              src={chokcookie}
-              className="Image backgroundC max-w-sm"
-              onClick={handleItemClick1}
-            />
-            <figcaption>Caption for Image 1</figcaption>
-            <Image
-              src={doublechock}
-              className="Image backgroundC max-w-sm"
-              onClick={handleItemClick2}
-            />
-            <Image
-              src={cinnamon}
-              className="Image backgroundC max-w-sm"
-              onClick={handleItemClick3}
-            />
+          <div className="ImageC space-x-40 flex p-10">
+            {/* First Image */}
+            <div className="image-caption-container">
+              <Image
+                src={chokcookie}
+                className="Image backgroundC w-full h-56"
+                onClick={handleItemClick1}
+              />
+              <figcaption className="mt-3 font-serif">
+                Chocolate Chip Cookies
+              </figcaption>
+            </div>
+            {/* Second Image */}
+            <div className="image-caption-container h-56">
+              <Image
+                src={doublechock}
+                className="Image backgroundC w-full"
+                onClick={handleItemClick2}
+              />
+              <figcaption className="mt-3 font-serif">
+                Double Chocolate Cookies
+              </figcaption>
+            </div>
+            {/* Third Image */}
+            <div className="image-caption-container">
+              <Image
+                src={cinnamon}
+                className="Image backgroundC w-full h-56"
+                onClick={handleItemClick3}
+              />
+              <figcaption className="mt-3 font-serif">
+                Cinnamon Cookies
+              </figcaption>
+            </div>
+            {/* Fourth Image */}
+            <div className="image-caption-container">
+              <Image
+                src={mosaiko}
+                className="Image backgroundC w-full h-56"
+                onClick={handleItemClick4}
+              />
+              <figcaption className="mt-3 font-serif">Mosaiko</figcaption>
+            </div>
           </div>
+
           {showPopup1 && (
             <div className="popup">
               <div className="popup-content">
@@ -143,6 +183,17 @@ const Cookies = () => {
                 </h2>
                 <p>This is the content of pop-up 3.</p>
                 <button onClick={handleClosePopup3}>◉</button>
+              </div>
+            </div>
+          )}
+          {showPopup4 && (
+            <div className="popup">
+              <div className="popup-content">
+                <h2 className="text-4xl underline font-serif">
+                  Cinnamon Cookies
+                </h2>
+                <p>This is the content of pop-up 4.</p>
+                <button onClick={handleClosePopup4}>◉</button>
               </div>
             </div>
           )}

@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
 
       <header>
-        <NavBarMeat />
+        <NavBar />
       </header>
 
       <main>

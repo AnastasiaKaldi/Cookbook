@@ -1,116 +1,67 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import hamburgermenu from "../public/hamburgermenu.png";
+import Image from "next/image";
 import Link from "next/link";
+import home from "../public/home.png";
+import salty from "../public/salty.png";
+import dessert from "../public/dessert.png";
 
-const NavBar = () => {
-  const [activeDropdown, setActiveDropdown] = useState(null);
+function NavBar() {
+  const [open, setOpen] = useState(false);
 
-  const handleDropdownEnter = (index) => {
-    setActiveDropdown(index);
-  };
+  let menuRef = useRef();
 
-  const handleDropdownLeave = () => {
-    setActiveDropdown(null);
-  };
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
 
   return (
-    <div className="natasa top-0 w-full z-10">
-      <div className="container mx-auto flex justify-between items-center py-4 px">
+    <div className="NavBar">
+      <div className="menu-container" ref={menuRef}>
         <div
-          className="heading text-4xl text-white"
-          style={{ fontFamily: "'Great Vibes', cursive" }}
+          className="menu-trigger"
+          onClick={() => {
+            setOpen(!open);
+          }}
         >
-          The Cookbook
+          <Image src={hamburgermenu} />
         </div>
-
-        <div className="flex gap-6">
-          <Link href="/" passHref>
-            <div
-              className="hover:text-[rgb(25,93,77)] text-white cursor-pointer relative"
-              onMouseEnter={() => handleDropdownEnter(0)}
-              onMouseLeave={handleDropdownLeave}
-            >
-              Home
-            </div>
-          </Link>
-
-          <div
-            className="hover:text-[rgb(255,255,255)] text-white cursor-pointer relative"
-            onMouseEnter={() => handleDropdownEnter(1)}
-            onMouseLeave={handleDropdownLeave}
-          >
-            Salty
-            {activeDropdown === 1 && (
-              <div className="dropdown-menu absolute bg-White shadow">
-                <Link href="/meat" passHref>
-                  <div className="dropdown-item">Meat</div>
-                </Link>
-                <Link href="/fish" passHref>
-                  <div className="dropdown-item">Fish</div>
-                </Link>
-                <Link href="/vegetarianSalty" passHref>
-                  <div className="dropdown-item">Vegetarian</div>
-                </Link>
-                <Link href="/veganSalty" passHref>
-                  <div className="dropdown-item">Vegan</div>
-                </Link>
-                <Link href="/glutenfreeSalty" passHref>
-                  <div className="dropdown-item">Gluten-Free</div>
-                </Link>
-                <Link href="/kosher" passHref>
-                  <div className="dropdown-item">Kosher</div>
-                </Link>
-              </div>
-            )}
-          </div>
-
-          <div
-            className="hover:text-[rgb(255,255,255)] text-white cursor-pointer relative"
-            onMouseEnter={() => handleDropdownEnter(2)}
-            onMouseLeave={handleDropdownLeave}
-          >
-            Desserts
-            {activeDropdown === 2 && (
-              <div className="dropdown-menu absolute bg-white shadow">
-                <Link href="/gfSweet" passHref>
-                  <div className="dropdown-item">Gluten-Free</div>
-                </Link>
-                <Link href="/cookies" passHref>
-                  <div className="dropdown-item">Cookies</div>
-                </Link>
-                <Link href="/vsweet" passHref>
-                  <div className="dropdown-item">Vegetarian</div>
-                </Link>
-                <Link href="/vgsweet" passHref>
-                  <div className="dropdown-item">Vegan</div>
-                </Link>
-              </div>
-            )}
-          </div>
-
-          <div
-            className="hover:text-[rgb(253,255,254)] text-white cursor-pointer relative"
-            onMouseEnter={() => handleDropdownEnter(3)}
-            onMouseLeave={handleDropdownLeave}
-          >
-            Pick a Mood
-            {activeDropdown === 3 && (
-              <div className="dropdown-menu absolute bg-white shadow">
-                <Link href="/20min" passHref>
-                  <div className="dropdown-item">Under 20 minutes</div>
-                </Link>
-                <Link href="/spicy" passHref>
-                  <div className="dropdown-item">Spicy</div>
-                </Link>
-                <Link href="/summer" passHref>
-                  <div className="dropdown-item">A taste for the summer</div>
-                </Link>
-              </div>
-            )}
-          </div>
+        <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
+          <ul className="flex flex-col space-y-4">
+            <Link href="/" passHref>
+              <DropdownItem src={home} text={"Home"} />
+            </Link>
+            <Link href="/meat" passHref>
+              <DropdownItem src={salty} text={"Salty"} />
+            </Link>
+            <Link href="/cookies" passHref>
+              <DropdownItem src={dessert} text={"Dessert"} />
+            </Link>
+          </ul>
         </div>
       </div>
     </div>
   );
-};
+}
+
+function DropdownItem(props) {
+  const { to, src, text } = props;
+  return (
+    <li className="dropdownItem">
+      <Image src={src} />
+      <a>{text}</a>
+    </li>
+  );
+}
 
 export default NavBar;
