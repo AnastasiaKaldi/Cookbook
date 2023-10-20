@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import chokcookie from "../styles/background/chokcookie.jpeg";
-import doublechock from "../styles/background/doublechock.jpeg";
-import cinnamon from "../styles/background/cinnamon.jpeg";
-import mosaiko from "../styles/background/mosaiko.jpeg";
+import chokcookie from "../styles/background/chokcookie.jpg";
+import doublechock from "../styles/background/doublechock.jpg";
+import cinnamon from "../styles/background/cinnamon.jpg";
+import mosaiko from "../styles/background/mosaiko.jpg";
 
 const Cookies = () => {
   const [showPopup1, setShowPopup1] = useState(false);
@@ -46,7 +46,7 @@ const Cookies = () => {
   return (
     <section className="cookies">
       <div className="mx-auto items-center justify-center">
-        <h1 className="destext  mb-10 text-violet-950 absolute top-60 left-1/2 transform -translate-x-1/2">
+        <h1 className="destext  mb-10 text-red-950 absolute top-60 left-1/2 transform -translate-x-1/2">
           The Dessert section
         </h1>
         <div className="">
@@ -64,13 +64,13 @@ const Cookies = () => {
               </figcaption>
             </div>
             {/* Second Image */}
-            <div className="image-caption-container h-56">
+            <div className="image-caption-container">
               <Image
                 src={doublechock}
-                className="Image backgroundC w-full"
+                className="Image backgroundC w-full h-56"
                 onClick={handleItemClick2}
               />
-              <figcaption className="mt-3 font-serif">
+              <figcaption className="mt-3 font-serif ">
                 Double Chocolate Cookies
               </figcaption>
             </div>

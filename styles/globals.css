@@ -491,6 +491,23 @@ figcaption {
   opacity: 0.7;
 }
 
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 10px;
+  margin: 0 15px;
+}
+
+
 .popup {
   position: fixed;
   top: 0;
@@ -504,7 +521,7 @@ figcaption {
 }
 
 .popup-content {
-  background-color: rgba(198, 163, 198, 0.685);
+  background-color: rgba(242, 230, 190, 0.504);
   padding: 10px;
   width: 70%;
   height: 70%;
@@ -529,6 +546,56 @@ figcaption {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.carousel__btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel__btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel__images {
+  flex: 1;
+  overflow: hidden;
+}
+
+.carousel__image {
+  max-width: 70%;
+  transition: transform 0.5s ease;
+}
+
+/* Recipe.module.css or your global CSS file */
+.carousel__frame.frame-1 {
+  /* Styling for the first image's frame */
+  background-color: rgba(128, 0, 128, 0.7); /* Purple frame */
+}
+
+.carousel__frame.frame-2 {
+  /* Styling for the second image's frame */
+  background-color: rgba(0, 128, 128, 0.7); /* Teal frame */
+}
+
+.carousel__frame.frame-3 {
+  /* Styling for the third image's frame */
+  background-color: rgba(128, 128, 0, 0.7); /* Olive frame */
+}
+
+/* Add more frame styles as needed for each image */
+
 
 .cookie-wrapper{
   position: relative;

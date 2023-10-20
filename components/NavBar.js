@@ -57,10 +57,10 @@ function NavBar() {
 function DropdownItem(props) {
   const { to, src, text } = props;
   return (
-    <li className="dropdownItem">
+    <p className="dropdownItem">
       <Image src={src} />
-      <a>{text}</a>
-    </li>
+      <b>{text}</b>
+    </p>
   );
 }
 

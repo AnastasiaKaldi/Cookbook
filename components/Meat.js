@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import cobb from "../styles/background/cobbsalad.jpeg";
-import gemista from "../styles/background/gemista.jpeg";
-import lasanga from "../styles/background/lasagnasoup.jpeg";
-import japegg from "../styles/background/japegg.jpeg";
+import bourguignon from "../styles/background/bourguignon.jpg";
+import Kalabhuna from "../styles/background/Kalabhuna.jpg";
+import lasanga from "../styles/background/lasagnasoup.jpg";
+import bacon from "../styles/background/bacon.jpg";
 
 const Meat = () => {
   const [showPopup1, setShowPopup1] = useState(false);
@@ -55,20 +55,20 @@ const Meat = () => {
             {/* First Image */}
             <div className="image-caption-container">
               <Image
-                src={cobb}
+                src={bourguignon}
                 className="Image backgroundC w-full h-56"
                 onClick={handleItemClick1}
               />
-              <figcaption className="mt-3 font-serif">Cobb Salad</figcaption>
+              <figcaption className="mt-3 font-serif">Bourguignon</figcaption>
             </div>
             {/* Second Image */}
-            <div className="image-caption-container h-56">
+            <div className="image-caption-container">
               <Image
-                src={gemista}
-                className="Image backgroundC w-full"
+                src={Kalabhuna}
+                className="Image backgroundC w-full h-56"
                 onClick={handleItemClick2}
               />
-              <figcaption className="mt-3 font-serif">Gemista</figcaption>
+              <figcaption className="mt-3 font-serif">Kala Bhuna</figcaption>
             </div>
             {/* Third Image */}
             <div className="image-caption-container">
@@ -82,12 +82,12 @@ const Meat = () => {
             {/* Fourth Image */}
             <div className="image-caption-container">
               <Image
-                src={japegg}
+                src={bacon}
                 className="Image backgroundC w-full h-56"
                 onClick={handleItemClick4}
               />
               <figcaption className="mt-3 font-serif">
-                Japanese Egg Sandwich
+                Bacon Pancakes
               </figcaption>
             </div>
           </div>
